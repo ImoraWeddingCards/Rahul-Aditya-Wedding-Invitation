@@ -62,8 +62,11 @@ function updateCountdown() {
 updateCountdown(); setInterval(updateCountdown, 1000);
 
 $('#openInvitation').addEventListener('click', () => {
-  $('#opening').classList.add('is-open');
-  document.body.style.overflow = '';
+  const opening = $('#opening');
+  if (opening.classList.contains('opening-envelope')) return;
+  opening.classList.add('opening-envelope');
+  $('#openInvitation').disabled = true;
+  setTimeout(() => { opening.classList.add('is-open'); document.body.style.overflow = ''; }, 1250);
 });
 document.body.style.overflow = 'hidden';
 

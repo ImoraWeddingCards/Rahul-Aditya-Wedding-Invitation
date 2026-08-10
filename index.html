@@ -9,15 +9,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Great+Vibes&family=Marcellus&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="envelope.css">
 </head>
 <body>
   <div class="opening" id="opening" aria-label="Opening invitation">
     <div class="opening-wash"></div><div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div>
-    <div class="opening-content">
-      <div class="mini-flower" aria-hidden="true">✦</div>
-      <p class="eyebrow">Together with the blessings of our elders</p>
-      <h1><span>Rahul M. S</span><b>&amp;</b><span>Aditya M</span></h1>
-      <button class="open-button" id="openInvitation">Open Invitation <span>→</span></button>
+    <div class="envelope-stage">
+      <button class="envelope" id="openInvitation" aria-label="Open Rahul and Aditya's wedding invitation">
+        <span class="envelope-letter"><span class="letter-symbol" aria-hidden="true">ॐ</span><span>Together with our families</span><strong>Rahul <i>&amp;</i> Aditya</strong></span>
+        <span class="envelope-back" aria-hidden="true"></span><span class="envelope-front" aria-hidden="true"></span><span class="envelope-flap" aria-hidden="true"></span><span class="wax-seal" aria-hidden="true">R &amp; A</span>
+      </button>
+      <p class="tap-to-open">Tap the envelope to open</p>
     </div>
   </div>
 
@@ -25,7 +27,7 @@
     <a class="monogram" href="#home" aria-label="Go to invitation home">R <i>&amp;</i> A</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span><span class="sr-only">Open menu</span></button>
     <nav id="siteNav" aria-label="Invitation navigation">
-      <a href="#home">Home</a><a href="#story">Our Story</a><a href="#wedding">Wedding</a><a href="#reception">Reception</a><a href="#gallery">Gallery</a><a href="#locations">Location</a>
+      <a href="#story">Our Story</a><a href="#wedding">Wedding</a><a href="#reception">Reception</a><a href="#locations">Location</a>
     </nav>
   </header>
 
@@ -57,29 +59,29 @@
     </section>
 
     <section class="story section" id="story" aria-labelledby="story-title">
-      <div class="story-card reveal"><p class="kicker">Our Story</p><h2 id="story-title">Two hearts, one<br><i>beautiful journey.</i></h2><div class="floral-rule">❦</div><p>Every love story is a little different. This space is waiting for the words that tell yours - a simple beginning, a joyful journey, and a lifetime of togetherness.</p><p class="editable-note">Replace this message with your own story.</p></div>
+      <div class="story-card reveal"><p class="kicker">Our Story</p><h2 id="story-title">Two hearts, one<br><i>beautiful journey.</i></h2><div class="floral-rule">❦</div><p>Every love story is a little different. This space is waiting for the words that tell yours - a simple beginning, a joyful journey, and a lifetime of togetherness.</p></div>
     </section>
 
     <section class="events section" aria-label="Wedding events">
       <article class="event-card reveal" id="ceremony">
         <p class="kicker">01 · The Wedding</p><h2>Marriage Ceremony</h2><div class="floral-rule">❦</div>
         <p class="event-time" id="ceremonyTime">Muhurtham : Between 11 am and 11.30 am</p><p class="event-place" id="ceremonyVenue">At Muthodam Auditorium, Mayyanad, Kollam</p>
-        <a class="location-link" id="ceremonyMap" href="#" target="_blank" rel="noopener"><span>⌖</span> View Location</a>
+        <a class="location-link" id="ceremonyMap" href="https://maps.app.goo.gl/yS16h4kd9MgFyhen8" target="_blank" ><span>⌖</span> </a>
       </article>
       <article class="event-card reception-card reveal" id="reception">
         <p class="kicker">02 · An Evening Together</p><h2>Reception</h2><div class="floral-rule">❦</div>
         <p class="event-time" id="receptionTime">From 4 pm onwards</p><p class="event-place" id="receptionVenue">Kings Convention Centre,<br>Puthenchantha, Varkala</p>
-        <a class="location-link" id="receptionMap" href="#" target="_blank" rel="noopener"><span>⌖</span> View Location</a>
+        <a class="location-link" id="receptionMap" href="#" target="_blank" rel="noopener"><span>⌖</span> </a>
       </article>
     </section>
 
     <section class="family section" aria-labelledby="family-title"><div class="section-heading reveal"><span>With love from our families</span><h2 id="family-title">A union of two families</h2><div class="floral-rule">❦</div></div><div class="family-grid reveal"><div><h3>Rahul M. S</h3><p>S/O Mr Madhu R &amp; Mrs Sunitha A</p><address>TC 91/2810, Pavithram House,<br>Karikkakom P.O, Trivandrum</address></div><div><h3>Aditya M</h3><p>D/O Mr Madhu S &amp; Mrs Maya R</p><address>Arya Bhavan Thazhathucherry,<br>Koottikkada P.O, Kollam</address></div></div></section>
 
-    <section class="gallery section" id="gallery" aria-labelledby="gallery-title"><div class="section-heading reveal"><span>Precious moments</span><h2 id="gallery-title">Our Gallery</h2><div class="floral-rule">❦</div></div><div class="gallery-grid reveal" id="galleryGrid">
+    <!-- <section class="gallery section" id="gallery" aria-labelledby="gallery-title"><div class="section-heading reveal"><span>Precious moments</span><h2 id="gallery-title">Our Gallery</h2><div class="floral-rule">❦</div></div><div class="gallery-grid reveal" id="galleryGrid">
       <button class="gallery-item tall"><img src="assets/gallery/photo1.jpg" alt="Wedding memory 1" loading="lazy"></button><button class="gallery-item"><img src="assets/gallery/photo2.jpg" alt="Wedding memory 2" loading="lazy"></button><button class="gallery-item wide"><img src="assets/gallery/photo3.jpg" alt="Wedding memory 3" loading="lazy"></button><button class="gallery-item"><img src="assets/gallery/photo4.jpg" alt="Wedding memory 4" loading="lazy"></button><button class="gallery-item"><img src="assets/gallery/photo5.jpg" alt="Wedding memory 5" loading="lazy"></button><button class="gallery-item wide"><img src="assets/gallery/photo6.jpg" alt="Wedding memory 6" loading="lazy"></button>
-    </div></section>
+    </div></section> -->
 
-    <section class="locations section" id="locations" aria-labelledby="locations-title"><div class="section-heading reveal"><span>Find your way</span><h2 id="locations-title">Scan for directions</h2><div class="floral-rule">❦</div></div><div class="qr-grid reveal"><div class="qr-card"><div class="qr-wrap"><img src="assets/marriage-qr.png" alt="Marriage ceremony QR code" class="qr-image"></div><h3>Marriage Ceremony</h3><a href="#ceremony">View details</a></div><div class="qr-card"><div class="qr-wrap"><img src="assets/reception-qr.png" alt="Reception QR code" class="qr-image"></div><h3>Reception</h3><a href="#reception">View details</a></div></div></section>
+    <section class="locations section" id="locations" aria-labelledby="locations-title"><div class="section-heading reveal"><span>Find your way</span><h2 id="locations-title">Scan for directions</h2><div class="floral-rule">❦</div></div><div class="qr-grid reveal"><div class="qr-card"><div class="qr-wrap"><img src="assets/marr.png" alt="Marriage ceremony QR code" class="qr-image"></div><h3>Marriage Ceremony</h3><a href="#ceremony">View details</a></div><div class="qr-card"><div class="qr-wrap"><img src="assets/king.png" alt="Reception QR code" class="qr-image"></div><h3>Reception</h3><a href="#reception">View details</a></div></div></section>
 
     <section class="closing section"><div class="floral floral-close-l" aria-hidden="true"></div><div class="floral floral-close-r" aria-hidden="true"></div><div class="closing-content reveal"><p class="kicker">With Best Compliments From</p><h2>Gokul M.S <i>&amp;</i> Archa K.J</h2><div class="floral-rule">❦</div><p>We look forward to celebrating<br>this beautiful day with you.</p></div></section>
   </main>

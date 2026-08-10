@@ -1,0 +1,20 @@
+/* Touch-first envelope reveal */
+.opening{perspective:1200px}
+.envelope-stage{position:relative;z-index:2;width:min(76vw,510px);padding-top:42px;text-align:center}
+.envelope{position:relative;display:block;width:100%;aspect-ratio:1.48;border:0;padding:0;background:transparent;filter:drop-shadow(0 23px 22px rgba(71,48,71,.22));transform-style:preserve-3d;touch-action:manipulation}
+.envelope:focus-visible{outline:2px solid var(--purple);outline-offset:12px}
+.envelope-back,.envelope-front,.envelope-flap{position:absolute;inset:0;display:block;overflow:hidden;border-radius:4px}
+.envelope-back{background:linear-gradient(145deg,#f1e7ee,#d6c5dd);border:1px solid rgba(181,138,85,.7)}
+.envelope-letter{position:absolute;z-index:1;left:8%;bottom:5%;width:84%;height:89%;padding:12% 7% 0;background:linear-gradient(140deg,#fffdf9,#f4e9f1);border:1px solid rgba(181,138,85,.55);box-shadow:0 0 0 5px rgba(255,255,255,.28);color:var(--gold);text-align:center;transition:transform 1.05s cubic-bezier(.2,.75,.2,1)}
+.envelope-letter span{display:block;font:clamp(8px,1.8vw,12px) var(--display);letter-spacing:.12em;text-transform:uppercase}
+.envelope-letter .letter-symbol{color:var(--purple);font:clamp(24px,5vw,40px) var(--serif);margin-bottom:9px}
+.envelope-letter strong{display:block;margin-top:12px;color:var(--purple);font:clamp(2rem,5vw,3.7rem)/.8 var(--script);font-weight:400}
+.envelope-letter i{font:clamp(1rem,2.4vw,1.45rem) var(--serif);font-style:normal;color:var(--gold)}
+.envelope-front{z-index:3;background:linear-gradient(135deg,transparent 49.5%,rgba(211,190,218,.82) 50%),linear-gradient(225deg,transparent 49.5%,rgba(232,218,233,.94) 50%),linear-gradient(0deg,#e7d9e4,#d0bed8);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%)}
+.envelope-flap{z-index:4;transform-origin:top;transition:transform .85s cubic-bezier(.2,.73,.3,1);backface-visibility:hidden;background:linear-gradient(145deg,#ebdfe9,#d0bdd9);clip-path:polygon(0 0,100% 0,50% 58%);border-top:1px solid rgba(181,138,85,.75)}
+.wax-seal{position:absolute;z-index:5;top:43%;left:50%;display:grid;place-items:center;width:clamp(45px,9vw,66px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 34% 28%,#9d739e,#68466f);box-shadow:0 2px 0 #4b3153,0 5px 10px rgba(57,36,61,.25);color:#f7e7c3;font:clamp(10px,2vw,14px) var(--display);letter-spacing:.04em;transform:translate(-50%,-50%);transition:opacity .22s ease,transform .35s ease}
+.tap-to-open{margin:27px 0 0;color:var(--plum);font:italic clamp(1rem,2.4vw,1.25rem) var(--serif);letter-spacing:.05em;animation:softTap 2s ease-in-out infinite}
+.opening-envelope .envelope-flap{transform:rotateX(-178deg);z-index:0}.opening-envelope .wax-seal{opacity:0;transform:translate(-50%,-80%) scale(.6)}.opening-envelope .envelope-letter{transform:translateY(-46%) scale(1.04);z-index:2}.opening-envelope .tap-to-open{opacity:0;transition:opacity .2s}.opening-envelope .envelope{animation:envelopeExit .5s .82s ease-in forwards}
+@keyframes softTap{50%{transform:translateY(-4px);opacity:.65}}@keyframes envelopeExit{to{opacity:0;transform:translateY(25px) scale(.96)}}
+@media(max-width:430px){.envelope-stage{width:min(88vw,390px);padding-top:0}.envelope-letter{padding-top:11%}.tap-to-open{margin-top:21px}.opening-wash{width:120vmax;height:120vmax}}
+@media(prefers-reduced-motion:reduce){.opening-envelope .envelope{animation:none}.opening-envelope .envelope-letter{transform:none}.opening-envelope .envelope-flap{transform:rotateX(-178deg)}}
