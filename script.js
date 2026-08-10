@@ -62,6 +62,11 @@ function updateCountdown() {
 updateCountdown(); setInterval(updateCountdown, 1000);
 
 $('#openInvitation').addEventListener('click', () => {
+  audio.play().then(() => {
+  musicButton.classList.add('playing');
+  musicButton.setAttribute('aria-pressed', 'true');
+  musicButton.querySelector('b').textContent = 'Music On';
+});
   const opening = $('#opening');
   if (opening.classList.contains('opening-envelope')) return;
   opening.classList.add('opening-envelope');
